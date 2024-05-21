@@ -9,42 +9,26 @@ import { ClockCard } from './ClockCard';
         <div className="mx-auto max-w-screen-xl p-16 mt-20">
             <ul className="grid md:grid-cols-4 gap-8">
                 <ClockCard
-                cityName={'São Paulo'}
-                time={'10;12:30'}
+                cityName={'Sydney'}
+                temiZone={'Australia/Sydney'}
+                marketStatus={true}
                 />
                 <ClockCard
                 cityName={'São Paulo'}
-                time={'10;12:30'}
+                temiZone={'America/Sao_Paulo'}
+                marketStatus={true}
                 />
                 <ClockCard
-                cityName={'São Paulo'}
-                time={'10;12:30'}
+                cityName={'New York'}
+                temiZone={'America/New_York'}
+                marketStatus={true}
                 />
                 <ClockCard
-                cityName={'São Paulo'}
-                time={'10;12:30'}
+                cityName={'Tokyo'}
+                temiZone={'Asia/Tokyo'}
+                marketStatus={false}
                 />
-                <ClockCard
-                cityName={'São Paulo'}
-                time={'10;12:30'}
-                />
-                <ClockCard
-                cityName={'São Paulo'}
-                time={'10;12:30'}
-                />
-                <ClockCard
-                cityName={'São Paulo'}
-                time={'10;12:30'}
-                />
-                <ClockCard
-                cityName={'São Paulo'}
-                time={'10;12:30'}
-                />
-                <ClockCard
-                cityName={'São Paulo'}
-                time={'10;12:30'}
-                />
-                
+
             </ul>
         </div>
     );
