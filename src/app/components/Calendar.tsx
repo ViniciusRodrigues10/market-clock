@@ -8,9 +8,8 @@ export const Calendar = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setDate(new Date());
-        }, 1000); // Atualiza a data a cada segundo
-
-        return () => clearInterval(intervalId); // Limpa o intervalo quando o componente é desmontado
+        }, 1000); 
+        return () => clearInterval(intervalId);
     }, []);
 
     const dayOfWeek = date.toLocaleDateString('pt-BR', { weekday: 'long' });
