@@ -8,11 +8,12 @@ interface CityClockProps {
 
 export const ClockCard: React.FC<CityClockProps> = ({ cityName, time }) => {
     return (
-        <div className="w-64 h-32 text-white p-4 rounded-lg relative flex items-center justify-center shadow-lg border border-gray-700">
-            <div className="absolute top-2 left-2 text-sm font-semibold">
+        <div className="w-64 h-32 text-white p-4 rounded-lg relative flex flex-col justify-center shadow-lg border border-gray-900">
+            <div className="absolute top-4 left-4 text-sm font-semibold">
                 {cityName}
             </div>
-            <div className="text-2xl font-bold mt-4">
+            <hr className="w-full border-t border-gray-900" />
+            <div className="text-2xl font-bold text-center mt-4">
                 {time}
             </div>
         </div>
