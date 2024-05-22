@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useEffect, useState } from 'react';
 
 interface RealTimeClockProps {
@@ -36,7 +35,7 @@ export const WorldClock: React.FC<RealTimeClockProps> = ({ timeZone }) => {
     return (
         <div className="flex flex-col items-center justify-center">
             <p className="text-3xl font-bold tabular-nums">{time}</p>
-            <p className="text-lg mt-2">{date}</p>
+            <p className="text-sm mt-2">{date}</p>
         </div>
     );
 };
