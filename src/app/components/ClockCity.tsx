@@ -6,29 +6,25 @@ import { ClockCard } from './ClockCard';
     return (
         <div className="mx-auto max-w-screen-xl p-16 mt-20">
             <ul className="grid md:grid-cols-4 gap-8">
-                <ClockCard cityName={'New York'} timeZone={'America/New_York'} marketStatus={true} />
-                <ClockCard cityName={'Toronto'} timeZone={'America/Toronto'} marketStatus={true} />
-                <ClockCard cityName={'Chicago'} timeZone={'America/Chicago'} marketStatus={true} />
-                <ClockCard cityName={'São Paulo'} timeZone={'America/Sao_Paulo'} marketStatus={true} />
-                <ClockCard cityName={'Wellington'} timeZone={'Pacific/Auckland'} marketStatus={true} />
-                <ClockCard cityName={'Sydney'} timeZone={'Australia/Sydney'} marketStatus={true} />
-                <ClockCard cityName={'Tokyo'} timeZone={'Asia/Tokyo'} marketStatus={false} />
-                <ClockCard cityName={'Shanghai'} timeZone={'Asia/Shanghai'} marketStatus={true} />
-                <ClockCard cityName={'Hong Kong'} timeZone={'Asia/Hong_Kong'} marketStatus={true} />
-                <ClockCard cityName={'Singapore'} timeZone={'Asia/Singapore'} marketStatus={true} />
-                <ClockCard cityName={'Mumbai'} timeZone={'Asia/Kolkata'} marketStatus={true} />
-                <ClockCard cityName={'Dubai'} timeZone={'Asia/Dubai'} marketStatus={true} />
-                <ClockCard cityName={'Riyadh'} timeZone={'Asia/Riyadh'} marketStatus={true} />
-                <ClockCard cityName={'Johannesburg'} timeZone={'Africa/Johannesburg'} marketStatus={true} />
-                <ClockCard cityName={'Moscow'} timeZone={'Europe/Moscow'} marketStatus={true} />
-                <ClockCard cityName={'Frankfurt'} timeZone={'Europe/Berlin'} marketStatus={true} />
-                <ClockCard cityName={'Zurich'} timeZone={'Europe/Zurich'} marketStatus={true} />
-                <ClockCard cityName={'London'} timeZone={'Europe/London'} marketStatus={true} />
+                <ClockCard cityName={'New York'} timeZone={'America/New_York'} marketOpeningTime={"09:30:00"} marketClosingTime={"16:00:00"} />
+                <ClockCard cityName={'Toronto'} timeZone={'America/Toronto'} marketOpeningTime={"09:30:00"} marketClosingTime={"16:00:00"} />
+                <ClockCard cityName={'Chicago'} timeZone={'America/Chicago'}  marketOpeningTime={"09:30:00"} marketClosingTime={"16:00:00"} />
+                <ClockCard cityName={'São Paulo'} timeZone={'America/Sao_Paulo'} marketOpeningTime={"10:00:00"} marketClosingTime={"17:00:00"} />
+                <ClockCard cityName={'Wellington'} timeZone={'Pacific/Auckland'} marketOpeningTime={"10:00:00"} marketClosingTime={"16:45:00"} />
+                <ClockCard cityName={'Sydney'} timeZone={'Australia/Sydney'} marketOpeningTime={"10:00:00"} marketClosingTime={"16:00:00"} />
+                <ClockCard cityName={'Tokyo'} timeZone={'Asia/Tokyo'} marketOpeningTime={"09:00:00"} marketClosingTime={"15:00:00"} />
+                <ClockCard cityName={'Shanghai'} timeZone={'Asia/Shanghai'} marketOpeningTime={"09:30:00"} marketClosingTime={"15:00:00"} />
+                <ClockCard cityName={'Hong Kong'} timeZone={'Asia/Hong_Kong'} marketOpeningTime={"09:30:00"} marketClosingTime={"16:00:00"} />
+                <ClockCard cityName={'Singapore'} timeZone={'Asia/Singapore'} marketOpeningTime={"09:00:00"} marketClosingTime={"17:00:00"} />
+                <ClockCard cityName={'Mumbai'} timeZone={'Asia/Kolkata'} marketOpeningTime={"09:15:00"} marketClosingTime={"15:30:00"} />
+                <ClockCard cityName={'Dubai'} timeZone={'Asia/Dubai'} marketOpeningTime={"10:00:00"} marketClosingTime={"14:00:00"} />
+                <ClockCard cityName={'Riyadh'} timeZone={'Asia/Riyadh'} marketOpeningTime={"10:00:00"} marketClosingTime={"15:00:00"} />
+                <ClockCard cityName={'Johannesburg'} timeZone={'Africa/Johannesburg'} marketOpeningTime={"09:00:00"} marketClosingTime={"17:00:00"} />
+                <ClockCard cityName={'Moscow'} timeZone={'Europe/Moscow'} marketOpeningTime={"10:00:00"} marketClosingTime={"18:40:00"} />
+                <ClockCard cityName={'Frankfurt'} timeZone={'Europe/Berlin'} marketOpeningTime={"08:00:00"} marketClosingTime={"17:30:00"} />
+                <ClockCard cityName={'Zurich'} timeZone={'Europe/Zurich'} marketOpeningTime={"09:00:00"} marketClosingTime={"17:30:00"} />
+                <ClockCard cityName={'London'} timeZone={'Europe/London'} marketOpeningTime={"08:00:00"} marketClosingTime={"16:30:00"} />
                 </ul>
         </div>
     );
 };
-
-
-
-
