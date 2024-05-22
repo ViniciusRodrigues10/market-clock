@@ -1,5 +1,5 @@
-import React from 'react';
-import { WorldClock } from './WorldClock';
+import React, { useEffect, useState } from 'react';
+import { getWorldDate, getWorldTime, updateWorldDate, updateWorldTime } from '../../utils/ClockFunctions'
 import styles from '../../styles/NeonLetters.module.css';
 
 interface CityClockProps {
@@ -9,6 +9,17 @@ interface CityClockProps {
 }
 
 export const ClockCard: React.FC<CityClockProps> = ({ cityName, marketStatus, timeZone }) => {
+    const [date, setDate] = useState<string>(() => getWorldDate(timeZone));
+    const [time, setTime] = useState<string>(() => getWorldTime(timeZone));
+
+    useEffect(() => {
+        const clearDateUpdate = updateWorldDate(timeZone, setDate);
+        const clearTimeUpdate = updateWorldTime(timeZone, setTime);
+        return () => {
+            clearDateUpdate();
+            clearTimeUpdate();
+        };
+    }, [timeZone]);
 
     const marketStatusColor = marketStatus ? `${styles['text-green-500']} ${styles['neon-text']}` : `${styles['text-red-500']} ${styles['neon-text']}`;
     const marketStatusText = marketStatus ? 'Aberto' : 'Fechado';
@@ -23,7 +34,8 @@ export const ClockCard: React.FC<CityClockProps> = ({ cityName, marketStatus, ti
             </div>
             <hr className="w-full border-t border-[#1f1e1e]" />
             <div className="text-2xl font-bold text-center mt-4">
-                <WorldClock timeZone={timeZone} />
+                <p className="text-3xl font-bold tabular-nums">{time}</p>
+                <p className="text-sm mt-2">{date}</p>
             </div>
         </div>
     );
