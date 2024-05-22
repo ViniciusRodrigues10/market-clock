@@ -1,28 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import { getWorldDate, getWorldTime, updateWorldDate, updateWorldTime } from '../../utils/ClockFunctions'
+import { marketIsOpen } from '../../utils/utils'
 import styles from '../../styles/NeonLetters.module.css';
 
 interface CityClockProps {
     cityName: string;
     timeZone: string;
-    marketStatus: boolean;
+    marketOpeningTime: string;
+    marketClosingTime: string;
 }
 
-export const ClockCard: React.FC<CityClockProps> = ({ cityName, marketStatus, timeZone }) => {
+export const ClockCard: React.FC<CityClockProps> = ({ cityName, timeZone, marketOpeningTime, marketClosingTime }) => {
     const [date, setDate] = useState<string>(() => getWorldDate(timeZone));
     const [time, setTime] = useState<string>(() => getWorldTime(timeZone));
+    const [negotiableMarket, setNegotiableMarket] = useState<boolean>(() => marketIsOpen(marketOpeningTime, marketClosingTime, time));
 
     useEffect(() => {
         const clearDateUpdate = updateWorldDate(timeZone, setDate);
         const clearTimeUpdate = updateWorldTime(timeZone, setTime);
+        
+        const marketStatusInterval = setInterval(() => {
+            const isOpen = marketIsOpen(marketOpeningTime, marketClosingTime, time);
+            setNegotiableMarket(isOpen);
+        }, 1000);
+
         return () => {
             clearDateUpdate();
             clearTimeUpdate();
+            clearInterval(marketStatusInterval);
         };
-    }, [timeZone]);
+    }, [timeZone, marketOpeningTime, marketClosingTime, time]);
 
-    const marketStatusColor = marketStatus ? `${styles['text-green-500']} ${styles['neon-text']}` : `${styles['text-red-500']} ${styles['neon-text']}`;
-    const marketStatusText = marketStatus ? 'Aberto' : 'Fechado';
+    const marketStatusColor = negotiableMarket ? `${styles['text-green-500']} ${styles['neon-text']}` : `${styles['text-red-500']} ${styles['neon-text']}`;
+    const marketStatusText = negotiableMarket ? 'Aberto' : 'Fechado';
 
     return (
         <div className="w-64 h-48 text-white p-4 rounded-lg relative flex flex-col justify-center bg-white/5 z-10 backdrop-filter backdrop-blur-lg shadow-lg">
