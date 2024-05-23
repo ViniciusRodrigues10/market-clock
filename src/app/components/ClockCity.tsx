@@ -4,8 +4,8 @@ import { ClockCard } from './ClockCard';
  export const ClockCity = () => {
 
     return (
-        <div className="mx-auto max-w-screen-xl p-16 mt-20">
-            <ul className="grid md:grid-cols-4 gap-8">
+        <div className="mx-auto max-w-screen-xl p-16 mt-10 md:mt-20 flex justify-center">
+            <ul className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                 <ClockCard cityName={'New York'} timeZone={'America/New_York'} marketOpeningTime={"09:30:00"} marketClosingTime={"16:00:00"} />
                 <ClockCard cityName={'Toronto'} timeZone={'America/Toronto'} marketOpeningTime={"09:30:00"} marketClosingTime={"16:00:00"} />
                 <ClockCard cityName={'Chicago'} timeZone={'America/Chicago'}  marketOpeningTime={"09:30:00"} marketClosingTime={"16:00:00"} />

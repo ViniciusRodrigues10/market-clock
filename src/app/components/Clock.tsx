@@ -18,5 +18,5 @@ export const Clock = ({ time: initial }: Props) => {
         return () => clearInterval(timer)
     }, [])
     
-    return <div className={`${digital.className} flex justify-center text-9xl tabular-nums md:mt-60`}>{time.toLocaleTimeString()}</div>
+    return <div className={`${digital.className} flex justify-center text-7xl tabular-nums mt-20 md:mt-60 md:text-9xl`}>{time.toLocaleTimeString()}</div>
 }

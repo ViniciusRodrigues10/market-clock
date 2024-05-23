@@ -1,5 +1,4 @@
 'use client'
-
 import { useEffect, useState } from "react"
 
 export const Calendar = () => {
@@ -18,7 +17,7 @@ export const Calendar = () => {
     const year = date.getFullYear();
 
     return (
-        <div className="flex justify-center items-center text-2xl mt-8">
+        <div className="flex justify-center items-center text-md mt-8 md:text-2xl">
             {dayOfWeek}, {day} de {month} de {year}
         </div>
     );
