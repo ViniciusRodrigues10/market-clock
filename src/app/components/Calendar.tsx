@@ -17,7 +17,7 @@ export const Calendar = () => {
     const year = date.getFullYear();
 
     return (
-        <div className="flex justify-center items-center text-md mt-8 md:text-2xl">
+        <div className="text-white flex justify-center items-center text-md mt-8 md:text-2xl">
             {dayOfWeek}, {day} de {month} de {year}
         </div>
     );
