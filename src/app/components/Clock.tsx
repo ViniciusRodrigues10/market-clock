@@ -1,6 +1,7 @@
 'use client'
-
 import { useEffect, useState } from "react"
+import localFont from '@next/font/local';
+const digital = localFont({ src: '../fonts/digital.ttf' });
 
 type Props = {
     time: number
@@ -17,5 +18,5 @@ export const Clock = ({ time: initial }: Props) => {
         return () => clearInterval(timer)
     }, [])
     
-    return <div className="flex justify-center items-center text-9xl tabular-nums md:mt-60 ">{time.toLocaleTimeString()}</div>
+    return <div className={`${digital.className} flex justify-center text-9xl tabular-nums md:mt-60`}>{time.toLocaleTimeString()}</div>
 }
