@@ -24,11 +24,17 @@ export function marketIsOpen(marketOpening: string, marketClosing:string, curren
     return false
 }
 
-export function calculateTimeDifferenceClose(currentDateString: string, currentTimeString: string, targetDateString: string, targetTimeString: string): string {
+export function calculateTimeDifference(currentDateString: string, currentTimeString: string, targetDateString: string, targetTimeString: string): string {
     const currentDateTime = parseDateTimeString(currentDateString, currentTimeString);
-    const targetDateTime = parseDateTimeString(targetDateString, targetTimeString);
+    let targetDateTime = parseDateTimeString(targetDateString, targetTimeString);
     
-    const differenceInMillis = targetDateTime.getTime() - currentDateTime.getTime();
+    let differenceInMillis = targetDateTime.getTime() - currentDateTime.getTime();
+    let isNegative = differenceInMillis < 0;
+    
+    if (isNegative) {
+        targetDateTime.setDate(targetDateTime.getDate() + 1);
+        differenceInMillis = targetDateTime.getTime() - currentDateTime.getTime();
+    }
 
     const hours = Math.floor(differenceInMillis / (1000 * 60 * 60));
     const minutes = Math.floor((differenceInMillis % (1000 * 60 * 60)) / (1000 * 60));
