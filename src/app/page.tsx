@@ -12,7 +12,9 @@ export default function Home() {
         <Clock time={now.getTime()} />
       </div>
       <Calendar />
-      <ClockCity /> 
+      <div className={`${digital.className}`}>
+        <ClockCity /> 
+      </div>
     </main>  
   );
 }
