@@ -5,6 +5,13 @@ function convertHoursToInteger(hour: string): number {
     return parseInt(newHour);
 }
 
+function parseDateTimeString(dateString: string, timeString: string): Date {
+    const [hours, minutes, seconds] = timeString.split(":").map(Number);
+    const [day, month, year] = dateString.split("/").map(Number);
+    
+    return new Date(year, month - 1, day, hours, minutes, seconds);
+}
+
 export function marketIsOpen(marketOpening: string, marketClosing:string, currentTime: string): boolean {
     const open = convertHoursToInteger(marketOpening);
     const close = convertHoursToInteger(marketClosing);
@@ -15,4 +22,21 @@ export function marketIsOpen(marketOpening: string, marketClosing:string, curren
     }
 
     return false
+}
+
+export function calculateTimeDifferenceClose(currentDateString: string, currentTimeString: string, targetDateString: string, targetTimeString: string): string {
+    const currentDateTime = parseDateTimeString(currentDateString, currentTimeString);
+    const targetDateTime = parseDateTimeString(targetDateString, targetTimeString);
+    
+    const differenceInMillis = targetDateTime.getTime() - currentDateTime.getTime();
+
+    const hours = Math.floor(differenceInMillis / (1000 * 60 * 60));
+    const minutes = Math.floor((differenceInMillis % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((differenceInMillis % (1000 * 60)) / 1000);
+
+    const formattedHours = String(hours).padStart(2, '0');
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedSeconds = String(seconds).padStart(2, '0');
+
+    return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
 }
