@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getWorldDate, getWorldTime, updateWorldDate, updateWorldTime } from '../../utils/ClockFunctions'
-import { marketIsOpen, calculateTimeDifferenceClose } from '../../utils/utils'
+import { marketIsOpen, calculateTimeDifference } from '../../utils/utils'
 import styles from '../../styles/NeonLetters.module.css';
 import localFont from '@next/font/local';
 const digital = localFont({ src: '../fonts/digital.ttf' });
@@ -16,7 +16,7 @@ export const ClockCard: React.FC<CityClockProps> = ({ cityName, timeZone, market
     const [date, setDate] = useState<string>(() => getWorldDate(timeZone));
     const [time, setTime] = useState<string>(() => getWorldTime(timeZone));
     const [negotiableMarket, setNegotiableMarket] = useState<boolean>(() => marketIsOpen(marketOpeningTime, marketClosingTime, time));
-    const [timeDifferenceClose, setTimeDifferenceClose] = useState<string>(() => calculateTimeDifferenceClose(date, time, date, marketClosingTime));
+    const [timeDifference, setTimeDifference] = useState<string>(() => calculateTimeDifference(date, time, date, negotiableMarket ? marketClosingTime : marketOpeningTime));
 
     useEffect(() => {
         const clearDateUpdate = updateWorldDate(timeZone, setDate);
@@ -28,8 +28,8 @@ export const ClockCard: React.FC<CityClockProps> = ({ cityName, timeZone, market
         }, 1000);
 
         const calculateDifferenceClose = setInterval(() => {
-            const difference = calculateTimeDifferenceClose(date, time, date, marketClosingTime);
-            setTimeDifferenceClose(difference);
+            const differenceClose = calculateTimeDifference(date, time, date, negotiableMarket ? marketClosingTime : marketOpeningTime);
+            setTimeDifference(differenceClose);
         }, 1000);
 
         return () => {
@@ -38,12 +38,12 @@ export const ClockCard: React.FC<CityClockProps> = ({ cityName, timeZone, market
             clearInterval(marketStatusInterval);
             clearInterval(calculateDifferenceClose);
         };
-    }, [timeZone, marketOpeningTime, marketClosingTime, time, date]);
+    }, [timeZone, marketOpeningTime, marketClosingTime, negotiableMarket, time, date]);
 
     const marketStatusColor = negotiableMarket ? `${styles['text-green-500']} ${styles['neon-text']}` : `${styles['text-red-500']} ${styles['neon-text']}`;
     const marketStatusText = negotiableMarket ? 'Aberto' : 'Fechado';
 
-    const marketDifferenceClose = negotiableMarket ? `${timeDifferenceClose} para o fechamento` : '';
+    const marketDifferenceClose = negotiableMarket ? `${timeDifference} para o fechamento` : `${timeDifference} para a abertura`;
 
     return (
         <div className="w-64 h-52 text-white p-4 rounded-lg relative flex flex-col justify-center bg-white/5 z-10 backdrop-filter backdrop-blur-lg shadow-lg">
