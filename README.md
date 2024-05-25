@@ -22,6 +22,7 @@
 
 ### Contribuições
 Contribuições são bem-vindas! Se você gostaria de contribuir com novos recursos, melhorias de design ou correções de bugs, sinta-se à vontade para enviar uma solicitação de pull.
+
 <br/>
 
 ### Como contribuir
@@ -57,8 +58,9 @@ Envie suas alterações para o repositório remoto forked:
 #### 7. Abra uma Pull Request:
 Vá até a página do repositório original no GitHub e clique no botão "New Pull Request". Selecione a branch que você criou e envie a pull request. Certifique-se de descrever claramente as mudanças que você fez e o motivo delas.
 
-### Features
+<br/>
 
+### Features
 - [x] Horários de Abertura e Fechamento
 - [x] Indicação de Status
 - [x] Atualização em Tempo Real
