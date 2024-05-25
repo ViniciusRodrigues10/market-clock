@@ -15,7 +15,7 @@
 
 ### Status do Projeto
 <h4 align=""> 
-	🚧  Website Portfolio 🚀 Em andamento...  🚧
+	🚧  Market Clock 🚀 Em andamento...  🚧
 </h4>
 <br/>
 
@@ -25,12 +25,10 @@ Contribuições são bem-vindas! Se você gostaria de contribuir com novos recur
 
 ### Features
 
-- [x] Adicionar novos projetos
-- [x] Criar cards de projetos
-- [x] Link para acesso dos código dos projetos
-- [x] Envio de mensagens por email
-- [x] Responsividade
-- [x] Efeito Parallax
+- [x] Horários de Abertura e Fechamento
+- [x] Indicação de Status
+- [x] Atualização em Tempo Real
+- [x] Interface Intuitiva
 <br/>
 
 ### Tecnologias utilizadas
@@ -39,10 +37,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [React](https://react.dev/)
 - [HTML5](https://ebaconline.com.br/blog/o-que-e-html5-seo)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-- [SCSS](https://sass-lang.com/)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Nodemailer](https://www.nodemailer.com/)
 <br/>
 
 ### Resultado
