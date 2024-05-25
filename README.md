@@ -25,37 +25,37 @@ Contribuições são bem-vindas! Se você gostaria de contribuir com novos recur
 <br/>
 
 ### Como contribuir
-1. Fork o Repositório:
-	Vá para a página do repositório no GitHub e clique no botão "Fork" no canto superior direito. Isso criará uma cópia do repositório em sua conta.
+#### 1. Fork o Repositório:
+Vá para a página do repositório no GitHub e clique no botão "Fork" no canto superior direito. Isso criará uma cópia do repositório em sua conta.
        
 
-2. Clone o Fork:
-	Clone o repositório forked para o seu ambiente de desenvolvimento local:
+#### 2. Clone o Fork:
+Clone o repositório forked para o seu ambiente de desenvolvimento local:
 
-    	git clone https://github.com/seu-usuario/market-clock.git
+	git clone https://github.com/seu-usuario/market-clock.git
 
-3. Crie uma Nova Branch:
-    Navegue até o diretório do projeto e crie uma nova branch para a sua feature ou correção de bug:
+#### 3. Crie uma Nova Branch:
+Navegue até o diretório do projeto e crie uma nova branch para a sua feature ou correção de bug:
 
-	    cd market-clock
-	    git checkout -b minha-feature
+    cd market-clock
+    git checkout -b minha-feature
 
-4. Faça Suas Modificações:
-    Implemente as alterações desejadas no código. Certifique-se de seguir as boas práticas de codificação e mantenha a consistência com o estilo do projeto.
+#### 4. Faça Suas Modificações:
+Implemente as alterações desejadas no código. Certifique-se de seguir as boas práticas de codificação e mantenha a consistência com o estilo do projeto.
 
-5. Commit suas Alterações:
-    Após realizar as modificações, adicione os arquivos alterados ao staging e faça um commit com uma mensagem clara e descritiva:
+#### 5. Commit suas Alterações:
+Após realizar as modificações, adicione os arquivos alterados ao staging e faça um commit com uma mensagem clara e descritiva:
 
-   		git add .
-   		git commit -m "Adiciona minha feature"
+	git add .
+	git commit -m "Adiciona minha feature"
 
-6. Envie para o Repositório Remoto:
-	Envie suas alterações para o repositório remoto forked:
+#### 6. Envie para o Repositório Remoto:
+Envie suas alterações para o repositório remoto forked:
 	
-	    git push origin minha-feature
+	git push origin minha-feature
 
-7. Abra uma Pull Request:
-    Vá até a página do repositório original no GitHub e clique no botão "New Pull Request". Selecione a branch que você criou e envie a pull request. Certifique-se de descrever claramente as mudanças que você fez e o motivo delas.
+#### 7. Abra uma Pull Request:
+Vá até a página do repositório original no GitHub e clique no botão "New Pull Request". Selecione a branch que você criou e envie a pull request. Certifique-se de descrever claramente as mudanças que você fez e o motivo delas.
 
 ### Features
 
