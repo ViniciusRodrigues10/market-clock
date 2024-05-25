@@ -8,9 +8,10 @@
 1. [Status do Projeto](#status-do-projeto)
 2. [Features](#features)
 3. [Contribuições](#contribuições)
-4. [Tecnologias utilizadas](#tecnologias-utilizadas)
-5. [Resultado](#resultado)
-6. [Autor](#autor)
+4. [Como contribuir](#como-contribuir)
+5. [Tecnologias utilizadas](#tecnologias-utilizadas)
+6. [Resultado](#resultado)
+7. [Autor](#autor)
 <br/>
 
 ### Status do Projeto
