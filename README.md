@@ -1,7 +1,7 @@
 ![market-clock](https://github.com/ViniciusRodrigues10/market-clock/assets/76957963/e6b0e0ed-3853-4c86-8420-3302b173383b)
 
-<h1 align="center"></h1>
-<p align="center">Este é o meu site de portfólio, desenvolvido usando Next.js 14.1.3. Aqui você encontrará informações sobre mim, meus projetos e habilidades.</p>
+<h1 align="center">Market Clock</h1>
+<p align="center">Market Clock é um projeto desenvolvido para exibir os horários de abertura e fechamento das principais bolsas de valores mundiais. Ele oferece uma visão clara e fácil de entender sobre os horários de operação dos mercados financeiros globais, ajudando traders e investidores a planejar suas atividades.</p>
 <br/>
 
 ### Tabela de conteúdos
