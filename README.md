@@ -25,17 +25,16 @@ Contribuições são bem-vindas! Se você gostaria de contribuir com novos recur
 <br/>
 
 ### Como contribuir
-    Fork o Repositório:
-        Vá para a página do repositório no GitHub e clique no botão "Fork" no canto superior direito. Isso criará uma cópia do repositório em sua conta.
+1. Fork o Repositório:
+	Vá para a página do repositório no GitHub e clique no botão "Fork" no canto superior direito. Isso criará uma cópia do repositório em sua conta.
+       
 
-    Clone o Fork:
-        Clone o repositório forked para o seu ambiente de desenvolvimento local:
+2. Clone o Fork:
+	Clone o repositório forked para o seu ambiente de desenvolvimento local:
 
-        bash
+    	git clone https://github.com/seu-usuario/market-clock.git
 
-    git clone https://github.com/seu-usuario/market-clock.git
-
-Crie uma Nova Branch:
+3. Crie uma Nova Branch:
 
     Navegue até o diretório do projeto e crie uma nova branch para a sua feature ou correção de bug:
 
