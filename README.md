@@ -42,7 +42,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <br/>
 
 ### Resultado
-Acesse meu portfolio: [clique aqui](https://portfolio-vinicius-rodrigues.netlify.app/)
+Acesse o Market Clock: [clique aqui](https://market-clock.netlify.app/)
 <br/>
 
 ### Autor
