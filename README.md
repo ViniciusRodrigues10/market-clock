@@ -35,37 +35,26 @@ Contribuições são bem-vindas! Se você gostaria de contribuir com novos recur
     	git clone https://github.com/seu-usuario/market-clock.git
 
 3. Crie uma Nova Branch:
-
     Navegue até o diretório do projeto e crie uma nova branch para a sua feature ou correção de bug:
 
-    bash
+	    cd market-clock
+	    git checkout -b minha-feature
 
-    cd market-clock
-    git checkout -b minha-feature
-
-Faça Suas Modificações:
-
+4. Faça Suas Modificações:
     Implemente as alterações desejadas no código. Certifique-se de seguir as boas práticas de codificação e mantenha a consistência com o estilo do projeto.
 
-Commit suas Alterações:
-
+5. Commit suas Alterações:
     Após realizar as modificações, adicione os arquivos alterados ao staging e faça um commit com uma mensagem clara e descritiva:
 
-    bash
+   		git add .
+   		git commit -m "Adiciona minha feature"
 
-    git add .
-    git commit -m "Adiciona minha feature"
+6. Envie para o Repositório Remoto:
+	Envie suas alterações para o repositório remoto forked:
+	
+	    git push origin minha-feature
 
-Envie para o Repositório Remoto:
-
-    Envie suas alterações para o repositório remoto forked:
-
-    bash
-
-    git push origin minha-feature
-
-Abra uma Pull Request:
-
+7. Abra uma Pull Request:
     Vá até a página do repositório original no GitHub e clique no botão "New Pull Request". Selecione a branch que você criou e envie a pull request. Certifique-se de descrever claramente as mudanças que você fez e o motivo delas.
 
 ### Features
