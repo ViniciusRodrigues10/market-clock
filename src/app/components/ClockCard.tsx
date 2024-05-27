@@ -15,7 +15,7 @@ interface CityClockProps {
 export const ClockCard: React.FC<CityClockProps> = ({ cityName, timeZone, marketOpeningTime, marketClosingTime }) => {
     const [date, setDate] = useState<string>(() => getWorldDate(timeZone));
     const [time, setTime] = useState<string>(() => getWorldTime(timeZone));
-    const [negotiableMarket, setNegotiableMarket] = useState<boolean>(() => marketIsOpen(marketOpeningTime, marketClosingTime, time));
+    const [negotiableMarket, setNegotiableMarket] = useState<boolean>(() => marketIsOpen(marketOpeningTime, marketClosingTime, time, date));
     const [timeDifference, setTimeDifference] = useState<string>(() => calculateTimeDifference(date, time, date, negotiableMarket ? marketClosingTime : marketOpeningTime));
 
     useEffect(() => {
@@ -23,7 +23,7 @@ export const ClockCard: React.FC<CityClockProps> = ({ cityName, timeZone, market
         const clearTimeUpdate = updateWorldTime(timeZone, setTime);
         
         const marketStatusInterval = setInterval(() => {
-            const isOpen = marketIsOpen(marketOpeningTime, marketClosingTime, time);
+            const isOpen = marketIsOpen(marketOpeningTime, marketClosingTime, time, date);
             setNegotiableMarket(isOpen);
         }, 1000);
 
