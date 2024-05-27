@@ -12,12 +12,26 @@ function parseDateTimeString(dateString: string, timeString: string): Date {
     return new Date(year, month - 1, day, hours, minutes, seconds);
 }
 
-export function marketIsOpen(marketOpening: string, marketClosing:string, currentTime: string): boolean {
+function isWeekend(dateString: string): boolean {
+    const [day, month, year] = dateString.split("/").map(Number);
+    const date = new Date(year, month - 1, day);
+    const dayOfWeek = date.getDay();
+
+    if (dayOfWeek === 0 || dayOfWeek === 6) {
+        return true;
+    } 
+    
+    return false;
+}
+
+export function marketIsOpen(marketOpening: string, marketClosing:string, currentTime: string, dateString: string): boolean {
     const open = convertHoursToInteger(marketOpening);
     const close = convertHoursToInteger(marketClosing);
     const current = convertHoursToInteger(currentTime);
 
-    if (current >= open && current < close) {
+    const isWeekendDay = isWeekend(dateString);
+
+    if (current >= open && current < close && !isWeekendDay) {
         return true;
     }
 
