@@ -4,7 +4,7 @@
 <p align="center">Market Clock é um projeto desenvolvido para exibir os horários de abertura e fechamento das principais bolsas de valores mundiais. Ele oferece uma visão clara e fácil de entender sobre os horários de operação dos mercados financeiros globais, ajudando traders e investidores a planejar suas atividades.</p>
 <br/>
 
-### Tabela de conteúdos
+### Tabela de conteúdo
 1. [Status do Projeto](#status-do-projeto)
 2. [Features](#features)
 3. [Contribuições](#contribuições)
