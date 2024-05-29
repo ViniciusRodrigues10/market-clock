@@ -65,6 +65,7 @@ Vá até a página do repositório original no GitHub e clique no botão "New Pu
 - [x] Indicação de Status
 - [x] Atualização em Tempo Real
 - [x] Interface Intuitiva
+- [ ] Filtrar quais mercados estão abertos
 <br/>
 
 ### Tecnologias utilizadas
