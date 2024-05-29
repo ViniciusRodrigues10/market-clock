@@ -24,7 +24,7 @@ import { ClockCard } from './ClockCard';
                 <ClockCard cityName={'Frankfurt'} timeZone={'Europe/Berlin'} marketOpeningTime={"08:00:00"} marketClosingTime={"17:30:00"} />
                 <ClockCard cityName={'Zurich'} timeZone={'Europe/Zurich'} marketOpeningTime={"09:00:00"} marketClosingTime={"17:30:00"} />
                 <ClockCard cityName={'London'} timeZone={'Europe/London'} marketOpeningTime={"08:00:00"} marketClosingTime={"16:30:00"} />
-                </ul>
+            </ul>
         </div>
     );
 };
