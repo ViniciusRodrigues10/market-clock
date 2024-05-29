@@ -66,6 +66,7 @@ Vá até a página do repositório original no GitHub e clique no botão "New Pu
 - [x] Atualização em Tempo Real
 - [x] Interface Intuitiva
 - [ ] Filtrar quais mercados estão abertos
+- [ ] Alarme para avisar quando o mercado abrir 
 <br/>
 
 ### Tecnologias utilizadas
